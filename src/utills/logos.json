@@ -1,0 +1,29 @@
+
+[
+    {
+        "id":1,
+        "image": "../logos/1.png"
+    },
+    {
+        "id":2,
+        "image":"../logos/2.png"
+    },
+    {
+        "id":3,
+        "image":"../logos/3.png"
+    },
+    {
+        "id":4,
+        "image":"../logos/4.png"
+    },
+    {
+        "id":5,
+        "image":"../logos/5.png"
+    },
+    {
+        "id":7,
+        "image":"../logos/6.png"
+    }
+    
+]
+
