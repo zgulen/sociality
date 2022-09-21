@@ -1,39 +1,44 @@
 import {useState} from "react";
 
 const Menu = () => {
-    const [accordion, setAccordion] = useState(true)
-    const [target, setTarget] = useState("")
     const handleClick = (e) => {
-        setAccordion(!accordion)
-        setTarget(e.target.id)
-        console.log(e.target.nextElementSibling.style.visibility)
+        console.log(e.target.children)
         if (e.target.nextElementSibling.style.visibility === 'visible'){
             e.target.nextElementSibling.style.visibility = 'hidden'
             e.target.nextElementSibling.style.display = 'none'
+            e.target.children[2].src = '../icons/SeeMore.png'
+            e.target.style.backgroundColor = "#393d42"
+
         }else{
+            e.target.style.backgroundColor = "#f55661"
             e.target.nextElementSibling.style.visibility = 'visible'
             e.target.nextElementSibling.style.display = 'block'
+            e.target.children[2].src = '../icons/SeeLess.png'
         }
         
     };
-    const condition = (e) =>{
-        console.log(e === target);
-        return e === target
+
+    const handleListClick = (e) =>{
+        console.log(e.target)
     }
     return (
         <div>
             <button className="accordion" id="1"><img className="bellwave" src="../icons/Shape 1.png" alt="" /><img src="../icons/Shape 2.png" alt="" /> NOTIFICATIONS <span className="notification">29</span></button><br />
             <button onClick={handleClick} className="accordion summary" id="2">
-                <img className="statistic-icon" src="../icons/summary1.png" alt="" /><img src="../icons/summary2.png" alt="" /> SUMMARY <img className="seemore-icon" src={condition("2") ? "../icons/SeeLess.png" : "../icons/SeeMore.png"} alt="plus icon" />
+                <img className="statistic-icon" src="../icons/summary1.png" alt="" /><img src="../icons/summary2.png" alt="" /> SUMMARY <img className="seemore-icon" src={"../icons/SeeMore.png"} alt="plus icon" />
             </button>
             <div className="panel">
-                asdasd
+                
             </div>
             <button onClick={handleClick} className="accordion summary" id="3">
-                <img className="statistic-icon" src="../icons/summary1.png" alt="" /><img src="../icons/summary2.png" alt="" /> SUMMARY <img className="seemore-icon" src={accordion ? "../icons/SeeMore.png" : "../icons/SeeLess.png"} alt="" />
+                <img  src="../icons/publish-icon.png" alt="" /><img src="" alt="" /> PUBLISH <img className="seemore-icon2" src={"../icons/SeeMore.png"} alt="" />
             </button>
             <div className="panel">
-                Seemore
+                <div className="square"> </div>
+                <ul className="publish-list" onClick={handleListClick}>
+                    <li className="list-items">Compose</li>
+                    <li className="list-items">Feed</li>
+                </ul>
             </div>
         </div>
     );
