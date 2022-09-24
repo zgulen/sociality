@@ -1,0 +1,16 @@
+$darkorange: rgb(235, 61, 18);
+$colors: grey green orange orangered steelblue;
+
+// loop!
+@each $color in $colors {
+    .#{$color}::before {
+        color: $color;
+        content: "\2022";
+        font-weight: 900;
+        font-size: 1.3rem;
+        display: inline-block;
+        width: 22px;
+        margin-right: 0;
+        text-indent: 10px;
+    }
+}

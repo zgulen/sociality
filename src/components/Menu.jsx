@@ -1,4 +1,3 @@
-import {useState} from "react";
 
 const Menu = () => {
     const handleClick = (e) => {
@@ -18,8 +17,10 @@ const Menu = () => {
         
     };
 
-    const handleListClick = (e) =>{
-        console.log(e.target)
+    const handleListClick = (event) =>{
+        event.target.style.color === "rgb(245, 86, 97)" 
+        ? event.target.style.color = "white"
+        : event.target.style.color = "#f55661"
     }
     return (
         <div>
@@ -40,6 +41,18 @@ const Menu = () => {
                     <li className="list-items">Feed</li>
                 </ul>
             </div>
+            <button onClick={handleClick} className="accordion summary" id="2">
+                <img className="" src="../icons/engageIcon.png" alt="" /><img src="" alt="" /> ENGAGE <img className="seemore-icon2" src={"../icons/SeeMore.png"} alt="plus icon" />
+            </button>
+            <div className="panel"></div>
+            <button onClick={handleClick} className="accordion summary" id="2">
+                <img className="" src="../icons/listenShape1.png" alt="" /><img className="listen-icon" src="../icons/listenShape2.png" alt="" /> LISTEN  <img className="seemore-icon-listen" src={"../icons/SeeMore.png"} alt="plus icon" />
+            </button>
+            <div className="panel"></div>
+            <button onClick={handleClick} className="accordion summary" id="2">
+                <img className="" src="../icons/reportIcon.png" alt="" /><img src="" alt="" /> REPORT  <img className="seemore-icon-report" src={"../icons/SeeMore.png"} alt="plus icon" />
+            </button>
+            <div className="panel"></div>
         </div>
     );
 };

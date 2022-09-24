@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.grey::before {
+  color: grey;
+  content: "•";
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 22px;
+  margin-right: 0;
+  text-indent: 10px;
+}
+
+.green::before {
+  color: green;
+  content: "•";
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 22px;
+  margin-right: 0;
+  text-indent: 10px;
+}
+
+.orange::before {
+  color: orange;
+  content: "•";
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 22px;
+  margin-right: 0;
+  text-indent: 10px;
+}
+
+.orangered::before {
+  color: orangered;
+  content: "•";
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 22px;
+  margin-right: 0;
+  text-indent: 10px;
+}
+
+.steelblue::before {
+  color: steelblue;
+  content: "•";
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 22px;
+  margin-right: 0;
+  text-indent: 10px;
+}/*# sourceMappingURL=list.css.map */

@@ -1,9 +1,11 @@
+@import url("./list.css");
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
 }
+
 .socialty-logo-container{
   width: 274px;
   padding-left: 66px;
@@ -24,7 +26,7 @@
 }
 
 .sidebar__list--logo{
-  width: 40px;
+  width: 38px;
   opacity: .5;
   border-radius: 5px;
   margin: .3rem 0;
@@ -93,13 +95,25 @@
   position: relative;
   left: 54px;
 }
+.seemore-icon-listen{
+  position: relative;
+  left: 69px;
+}
+.seemore-icon-report{
+  position: relative;
+  left: 56px;
+}
 .publish-list{
   padding: 12px 0 8px 40px  ;
   font-size: .8rem;
+  color: white;
+  cursor: pointer;
+  background-color: #32363a;
 }
 
 .list-items{
   margin-top: .5rem;
+  color: white;
 }
 
 .square{
@@ -111,3 +125,27 @@
   top: 205px;
   left: 87px;
 }
+.listen-icon{
+  position: absolute;
+  top: 299px;
+}
+
+.desc{
+  display: flex;
+  list-style: none;
+}
+
+.desc > li{
+  color: black;
+  margin-left: 1.4rem;
+  font-size: 1rem;
+}
+
+/* .desc li::before{
+  content: "\2022";
+  font-weight: 900;
+  display: inline-block;
+  width: 22px;
+  margin-right: 0;
+  text-indent: 10px;
+} */

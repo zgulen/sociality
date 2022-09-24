@@ -1,7 +1,8 @@
-import './App.css';
+import './style.css';
 import Logo from './components/Logo';
 import SidebarLogos from './components/SidebarLogos';
 import Menu from './components/Menu';
+import Description from './components/Description';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <SidebarLogos/>
         <Menu/>
       </div>
+        <Description/>
     </div>
   );
 }
