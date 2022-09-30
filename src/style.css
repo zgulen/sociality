@@ -1,9 +1,12 @@
 @import url("./list.css");
+@import url("./stylings/cards.css");
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
+}
+.App{
+  display: flex;
 }
 
 .socialty-logo-container{
@@ -64,6 +67,7 @@
   outline: none;
   font-size: 15px;
   text-indent: 4px;
+  color: white;
 }
 .bellwave{
   position: absolute;
@@ -125,6 +129,7 @@
   top: 205px;
   left: 87px;
 }
+
 .listen-icon{
   position: absolute;
   top: 299px;
@@ -133,6 +138,7 @@
 .desc{
   display: flex;
   list-style: none;
+  margin-top: 1.2rem;
 }
 
 .desc > li{
@@ -140,12 +146,3 @@
   margin-left: 1.4rem;
   font-size: 1rem;
 }
-
-/* .desc li::before{
-  content: "\2022";
-  font-weight: 900;
-  display: inline-block;
-  width: 22px;
-  margin-right: 0;
-  text-indent: 10px;
-} */

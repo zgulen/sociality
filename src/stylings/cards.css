@@ -1,0 +1,22 @@
+.card-container{
+    display: flex;
+  }
+  
+  .card{
+    margin-left: 1rem;
+    display: flex;
+  }
+
+.status3 {
+    background-color: orangered;
+    width: 44px;
+    height: 420px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+}
+

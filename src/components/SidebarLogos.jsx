@@ -3,7 +3,6 @@ import { useState} from 'react'
 import logos from "../utills/logos.json"
 const SidebarLogos = () => {
   const [target, setTarget] = useState("")
-  console.log(logos);
   const handleClick =(e, id)=>{
     setTarget(id)
   }
