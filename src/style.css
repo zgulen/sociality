@@ -139,10 +139,11 @@
   display: flex;
   list-style: none;
   margin-top: 1.2rem;
+  margin-left: 2rem;
 }
 
 .desc > li{
   color: black;
-  margin-left: 1.4rem;
+  margin-left: 0.2rem;
   font-size: 1rem;
 }

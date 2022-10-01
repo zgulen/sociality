@@ -1,22 +1,58 @@
-.card-container{
+@import url("./statusColors.css");
+.card-container {
     display: flex;
-  }
-  
-  .card{
-    margin-left: 1rem;
-    display: flex;
-  }
+    flex-wrap: wrap;
+}
 
-.status3 {
-    background-color: orangered;
-    width: 44px;
-    height: 420px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+.card {
+    margin-left: 3rem;
+    margin-top: 2rem;
+    width: 344px;
+    position: relative;
+}
+
+.status {
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 1.3rem;
+    width: 44px;
+    height: 420px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
+.publish-time {
+    margin: 1rem 0 0 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.time-icons{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 44px;
+}
+.card-icons{
+    margin: 1rem 0 0 0.5rem;
+    height: 30px;
+}
+.card-icons > span{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.card-entry{
+    position: absolute;
+    top: 40px;
+    left: 55px;
+    font-size: 0.9rem;
+}
+
+.card-entry > img{
+    margin-top: .5rem;
+}
