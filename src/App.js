@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <div>
         <Logo />
-        <div style={{ 'display': 'flex' }}>
+        <div style={{ 'display': 'flex', 'height': '100%', 'background': '#393d42' }}>
           <SidebarLogos />
           <Menu />
         </div>

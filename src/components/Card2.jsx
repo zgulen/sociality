@@ -1,17 +1,10 @@
-/* eslint-disable no-undef */
-import data from "../utills/data.json";
-import { useState } from "react";
+import React from "react";
 import { dateConverter } from "../utills/date";
-import Card2 from "./Card2";
 import { socialIcon } from "../utills/iconF";
 
-const Card = () => {
-    const [data0617] = useState(data.posts_by_date["2021-06-17"]);
-    const [data0701] = useState(data.posts_by_date["2021-07-01"]);
-    // console.log(data0701);
+const Card2 = ({ data0617 }) => {
     return (
-        <>
-            <Card2 data0617={data0701}/>
+        <div>
             <div>
                 <h3 className="post-date">{`${data0617[0].published_at.slice(
                     8,
@@ -120,8 +113,8 @@ const Card = () => {
                     })}
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
-export default Card;
+export default Card2;

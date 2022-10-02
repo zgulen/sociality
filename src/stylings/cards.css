@@ -1,4 +1,13 @@
 @import url("./statusColors.css");
+
+.post-date{
+    font-weight: 300;
+    margin-left: 3rem;
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    opacity: .8;
+    
+}
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -18,28 +27,27 @@
     color: white;
     font-size: 1.3rem;
     width: 44px;
-    height: 420px;
+    height: 445px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
 .publish-time {
     margin: 1rem 0 0 0.5rem;
-    font-size: 0.8rem;
-    opacity: 0.7;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
 }
 
 .time-icons{
     display: flex;
-    justify-content: space-between;
+    width: max-content;
     height: 30px;
     position: absolute;
     top: 0;
-    left: 44px;
+    left: 55px;
 }
 .card-icons{
-    margin: 1rem 0 0 0.5rem;
-    height: 30px;
+    margin: 1rem 0 0 3rem;
 }
 .card-icons > span{
     margin-left: 1rem;
@@ -48,11 +56,36 @@
 
 .card-entry{
     position: absolute;
-    top: 40px;
-    left: 55px;
-    font-size: 0.9rem;
+    top: 45px;
+    left: 4rem;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+.card-entry > p{
+    opacity: .6;
+}
+.card-entry > p > a{
+    text-decoration: none;
+    color: #44a8f0;
 }
 
 .card-entry > img{
     margin-top: .5rem;
+}
+
+.statistics-icons{
+    position: absolute;
+    bottom: 14px;
+    left: 54px;
+}
+.statistics-icons > img{
+    margin-left: 1rem;
+}
+.stats{
+    font-size: .9rem;
+    opacity: .8;
+    margin: .5rem;
+    position: relative;
+    top: -3px;
 }
