@@ -1,21 +1,22 @@
 import React from "react";
 import { dateConverter } from "../utills/date";
 import { socialIcon } from "../utills/iconF";
+import { useNavigate } from "react-router-dom";
 
-const Card2 = ({ data0617 }) => {
+const Card2 = ({ data0701 }) => {
     return (
         <div>
             <div>
-                <h3 className="post-date">{`${data0617[0].published_at.slice(
+                <h3 className="post-date">{`${data0701[0].published_at.slice(
                     8,
                     10
                 )} 
                                 ${dateConverter(
-                                    data0617[0].published_at.slice(5, 7)
+                                    data0701[0].published_at.slice(5, 7)
                                 )} 
-                                ${data0617[0].published_at.slice(0, 4)}`}</h3>
+                                ${data0701[0].published_at.slice(0, 4)}`}</h3>
                 <div className="card-container">
-                    {data0617?.map((e, index) => {
+                    {data0701?.map((e, index) => {
                         console.log(e);
                         const {
                             published_at,
@@ -24,6 +25,7 @@ const Card2 = ({ data0617 }) => {
                             is_published,
                             entry: { message },
                             entry: { image },
+                            account: { link },
                         } = e;
                         return (
                             <div className="card" key={index}>
@@ -34,8 +36,7 @@ const Card2 = ({ data0617 }) => {
                                 </div>
                                 <div className="time-icons">
                                     <p className="publish-time">
-                                        <time datetime={published_at}>
-                                            {/* I didn't like this solutions but i couldn't find any  */}
+                                        <time dateTime={published_at}>
                                             {`
                                 ${published_at.slice(8, 10)} 
                                 ${dateConverter(published_at.slice(5, 7))} 
@@ -79,17 +80,19 @@ const Card2 = ({ data0617 }) => {
                                             )}
                                         </a>
                                     </p>
-                                    <img
-                                        width={288}
-                                        src={image[0]}
-                                        onError={({ currentTarget }) => {
-                                            console.log(currentTarget);
-                                            currentTarget.onerror = null; // prevents looping
-                                            currentTarget.src =
-                                                "../nopostimg/no-post-image.png";
-                                        }}
-                                        alt="post"
-                                    />
+                                    <a href={link}>
+                                        <img
+                                            width={288}
+                                            src={image[0]}
+                                            onError={({ currentTarget }) => {
+                                                console.log(currentTarget);
+                                                currentTarget.onerror = null; // prevents looping
+                                                currentTarget.src =
+                                                    "../nopostimg/no-post-image.png";
+                                            }}
+                                            alt="post"
+                                        />
+                                    </a>
                                 </div>
                                 <div className="statistics-icons">
                                     <img
@@ -100,13 +103,13 @@ const Card2 = ({ data0617 }) => {
                                         }
                                         alt=""
                                     />
-                                    <span className="stats">124</span>
+                                    <span className="stats">0</span>
                                     <img src="../icons/comments.png" alt="" />
-                                    <span className="stats">63</span>
+                                    <span className="stats">0</span>
                                     <img src="../icons/shares.png" alt="" />
-                                    <span className="stats">4</span>
+                                    <span className="stats">0</span>
                                     <img src="../icons/views.png" alt="" />
-                                    <span className="stats">1426</span>
+                                    <span className="stats">0</span>
                                 </div>
                             </div>
                         );

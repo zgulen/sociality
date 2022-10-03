@@ -1,17 +1,17 @@
-/* eslint-disable no-undef */
-import data from "../utills/data.json";
-import { useState } from "react";
-import { dateConverter } from "../utills/date";
+import { useState, useContext } from "react";
+import { DataContext } from "../context/DataContext";
 import Card2 from "./Card2";
 import { socialIcon } from "../utills/iconF";
+import { dateConverter } from "../utills/date";
 
 const Card = () => {
+    const { data } = useContext(DataContext);
     const [data0617] = useState(data.posts_by_date["2021-06-17"]);
     const [data0701] = useState(data.posts_by_date["2021-07-01"]);
     // console.log(data0701);
     return (
         <>
-            <Card2 data0617={data0701}/>
+            <Card2 data0701={data0701} />
             <div>
                 <h3 className="post-date">{`${data0617[0].published_at.slice(
                     8,
@@ -31,6 +31,7 @@ const Card = () => {
                             is_published,
                             entry: { message },
                             entry: { image },
+                            account: { link },
                         } = e;
                         return (
                             <div className="card" key={index}>
@@ -41,7 +42,7 @@ const Card = () => {
                                 </div>
                                 <div className="time-icons">
                                     <p className="publish-time">
-                                        <time datetime={published_at}>
+                                        <time dateTime={published_at}>
                                             {/* I didn't like this solutions but i couldn't find any  */}
                                             {`
                                 ${published_at.slice(8, 10)} 
@@ -86,17 +87,19 @@ const Card = () => {
                                             )}
                                         </a>
                                     </p>
-                                    <img
-                                        width={288}
-                                        src={image[0]}
-                                        onError={({ currentTarget }) => {
-                                            console.log(currentTarget);
-                                            currentTarget.onerror = null; // prevents looping
-                                            currentTarget.src =
-                                                "../nopostimg/no-post-image.png";
-                                        }}
-                                        alt="post"
-                                    />
+                                    <a href={link}>
+                                        <img
+                                            width={288}
+                                            src={image[0]}
+                                            onError={({ currentTarget }) => {
+                                                console.log(currentTarget);
+                                                currentTarget.onerror = null; // prevents looping
+                                                currentTarget.src =
+                                                    "../nopostimg/no-post-image.png";
+                                            }}
+                                            alt="post"
+                                        />
+                                    </a>
                                 </div>
                                 <div className="statistics-icons">
                                     <img

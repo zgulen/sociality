@@ -70,7 +70,7 @@
     color: #44a8f0;
 }
 
-.card-entry > img{
+.card-entry > a > img{
     margin-top: .5rem;
 }
 
