@@ -136,6 +136,11 @@
   top: 299px;
 }
 
+.description{
+  display: flex;
+  justify-content: space-between;
+}
+
 .desc{
   display: flex;
   list-style: none;
@@ -147,4 +152,8 @@
   color: black;
   margin-left: 0.2rem;
   font-size: 1rem;
+}
+.description > div {
+  position: relative;
+  top: 1.1rem;
 }

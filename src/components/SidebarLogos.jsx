@@ -3,7 +3,7 @@ import { useState} from 'react'
 import logos from "../utills/logos.json"
 const SidebarLogos = () => {
   const [target, setTarget] = useState("")
-  const handleClick =(e, id)=>{
+  const handleClick =(id)=>{
     setTarget(id)
   }
   
@@ -15,7 +15,7 @@ const SidebarLogos = () => {
               const { image, id } = items
               return(
                 <li key={i} className={target !== id ? "" : "red-border"}>
-                    <a href="#/" onClick={(e) => handleClick(e, id)}><img id={id} className={target !== id ? "sidebar__list--logo" : "opacity"} src={image} alt="222"/></a>
+                    <a href="#/" onClick={(e) => handleClick(id)}><img id={id} className={target !== id ? "sidebar__list--logo" : "opacity"} src={image} alt="222"/></a>
                 </li>
               )
             })

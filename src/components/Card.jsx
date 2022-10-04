@@ -8,7 +8,6 @@ const Card = () => {
     const { data } = useContext(DataContext);
     const [data0617] = useState(data.posts_by_date["2021-06-17"]);
     const [data0701] = useState(data.posts_by_date["2021-07-01"]);
-    // console.log(data0701);
     return (
         <>
             <Card2 data0701={data0701} />
