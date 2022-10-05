@@ -132,8 +132,9 @@
 }
 
 .listen-icon{
-  position: absolute;
-  top: 299px;
+  position: relative;
+  left: -22px;
+  top: 6px;
 }
 
 .description{
