@@ -2,7 +2,7 @@ import React from 'react'
 
 const Default = () => {
   return (
-    <div>Under Costuraction</div>
+    <div className='default'><img src="../icons/notreadyyet.png" alt=""  /></div>
   )
 }
 

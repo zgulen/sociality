@@ -157,3 +157,15 @@
   position: relative;
   top: 1.1rem;
 }
+.default{
+  height: 100vh;
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.default >img{
+  margin: auto;
+  width: 50vw;
+}
