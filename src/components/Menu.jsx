@@ -9,6 +9,7 @@ const Menu = () => {
     const handleClick = (e) => {
         console.log(e.target.nextElementSibling.style.visibility)
         setStyle("second")
+        setPage(e.target.innerText)
         if (e.target.nextElementSibling.style.visibility === 'visible'){
             e.target.nextElementSibling.style.visibility = 'hidden'
             e.target.nextElementSibling.style.display = 'none'
@@ -53,8 +54,8 @@ const Menu = () => {
                 <img className="" src="../icons/engageIcon.png" alt="" /><img src="" alt="" /> ENGAGE <img className="seemore-icon2" src={"../icons/SeeMore.png"} alt="plus icon" />
             </button>
             <div className="panel"></div>
-            <button onClick={handleClick} className="accordion summary" id="2">
-                <img className="" src="../icons/listenShape1.png" alt="" /><img className="listen-icon" src="../icons/listenShape2.png" alt="" /> LISTEN <img className="seemore-icon-listen" src={"../icons/SeeMore.png"} alt="plus icon" />
+            <button onClick={handleClick} className="accordion summary " id="2">
+                <img className="" src="../icons/listenShape1.png" alt="" /><img className="listen-icon" src="../icons/listenShape2.png" alt="" /><span className="listen">LISTEN</span>  <img className="seemore-icon-listen" src={"../icons/SeeMore.png"} alt="plus icon" />
             </button>
             <div className="panel"></div>
             <button onClick={handleClick} className="accordion summary" id="2">
