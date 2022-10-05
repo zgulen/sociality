@@ -1,14 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { DataContext } from "../context/DataContext";
 
 const Menu = () => {
     const { setPage } = useContext(DataContext)
-    const [style, setStyle] = useState("first")
 
 
     const handleClick = (e) => {
         console.log(e.target.nextElementSibling.style.visibility)
-        setStyle("second")
         setPage(e.target.innerText)
         if (e.target.nextElementSibling.style.visibility === 'visible'){
             e.target.nextElementSibling.style.visibility = 'hidden'
