@@ -69,6 +69,7 @@
   font-size: 15px;
   text-indent: 4px;
   color: white;
+  position: relative;
 }
 .bellwave{
   position: absolute;
@@ -89,8 +90,8 @@
 
 .statistic-icon{
   position: absolute;
-  top: 131px;
-  left: 88px;
+  top: 22px;
+  left: 22px;
 }
 .seemore-icon{
   position: relative;
@@ -100,13 +101,10 @@
   position: relative;
   left: 54px;
 }
-.listen{
-  position: relative;
-  left: -17px;
-}
+
 .seemore-icon-listen{
   position: relative;
-  left: 49px;
+  left: 68px;
 }
 .seemore-icon-report{
   position: relative;
@@ -136,9 +134,9 @@
 }
 
 .listen-icon{
-  position: relative;
-  left: -22px;
-  top: 6px;
+  position: absolute;
+  left: 18px;
+  top: 28px;
 }
 
 .description{
@@ -173,4 +171,9 @@
 .default >img{
   margin: auto;
   width: 50vw;
+}
+
+.accordion > p{
+  position: relative;
+  left: -17px;
 }
