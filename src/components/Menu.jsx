@@ -54,7 +54,7 @@ const Menu = () => {
             </button>
             <div className="panel"></div>
             <button onClick={handleClick} className="accordion summary" id="2">
-                <img className="" src="../icons/listenShape1.png" alt="" /><img className="listen-icon" src="../icons/listenShape2.png" alt="" /> LISTEN  <img className="seemore-icon-listen" src={"../icons/SeeMore.png"} alt="plus icon" />
+                <img className="" src="../icons/listenShape1.png" alt="" /><img className="listen-icon" src="../icons/listenShape2.png" alt="" /> LISTEN <img className="seemore-icon-listen" src={"../icons/SeeMore.png"} alt="plus icon" />
             </button>
             <div className="panel"></div>
             <button onClick={handleClick} className="accordion summary" id="2">
