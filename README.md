@@ -6,4 +6,4 @@
 * Scss for *loop*, 
 * javascript
 
-![](./scss.gif)
+![](./task.gif)
